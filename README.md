@@ -129,3 +129,87 @@ Hyperparameter Tuning: Adjust the max_iter in LogisticRegression to achieve conv
 Evaluate on Test Set: Calculate the accuracy score on x_test and y_test using the generated y_pred.
 
 Alternative Models: Explore other classification algorithms like Random Forest or Support Vector Machines.
+❤️ Heart Disease Prediction using Logistic Regression
+🧠 Overview
+
+This project aims to analyze and predict the likelihood of heart disease based on various health and lifestyle factors such as cholesterol, blood pressure, smoking habits, stress levels, and more.
+The dataset is explored, preprocessed, and modeled using Python (Pandas, Seaborn, Scikit-learn) within Google Colab.
+
+📊 Dataset Information
+Feature	Description
+Age	Age of the individual
+Gender	Male / Female
+Cholesterol	Cholesterol level (mg/dL)
+Blood Pressure	Blood pressure (mmHg)
+Heart Rate	Heart rate (bpm)
+Smoking	Smoking habit (Current / Former / Never)
+Alcohol Intake	Alcohol consumption level
+Exercise Hours	Average hours of exercise per week
+Family History	Family history of heart disease
+Diabetes	Whether diabetic or not
+Obesity	Presence of obesity
+Stress Level	Measured stress level
+Blood Sugar	Blood sugar level
+Exercise Induced Angina	Angina caused by exercise (Yes / No)
+Chest Pain Type	Type of chest pain
+Heart Disease	Target variable (1 = Yes, 0 = No)
+🧹 Data Preprocessing
+
+✔️ Handled missing values in the Alcohol Intake column using mode imputation.
+✔️ Applied Label Encoding to categorical columns such as Gender, Smoking, Family History, etc.
+✔️ Split data into training (80%) and testing (20%) sets.
+✔️ Scaled numerical features using StandardScaler.
+
+🤖 Model Training
+
+Model used: Logistic Regression
+
+from sklearn.linear_model import LogisticRegression
+lr = LogisticRegression()
+lr.fit(x_train, y_train)
+
+
+Model achieved:
+
+Training Accuracy: ≈ 60.87%
+
+📈 Evaluation
+
+After training, predictions were made using:
+
+y_pred = lr.predict(x_test)
+
+
+Although the accuracy is modest, it provides a baseline model for future improvements such as:
+
+Feature selection
+
+Hyperparameter tuning
+
+Trying other algorithms like Random Forest or XGBoost
+
+📊 Visualization & Insights
+
+Distribution plots using Seaborn (sns.histplot) and Matplotlib
+
+Bar charts to visualize relations between Age, Smoking habits, and Heart Disease occurrence
+
+🧩 Tools & Libraries
+Library	Purpose
+pandas	Data loading & manipulation
+matplotlib	Data visualization
+seaborn	Statistical plotting
+sklearn	Machine learning & preprocessing
+🚀 Future Scope
+
+Improve model accuracy using ensemble techniques
+
+Add cross-validation
+
+Deploy as a web app (Streamlit/Flask) for real-time heart disease risk prediction
+
+👨‍💻 Author
+
+Jatin Yadav
+B.Tech (2nd Semester) | Data Science Enthusiast
+📘 Tools: Python, Google Colab, Scikit-learn, Pandas, Matplotlib, Seaborn
